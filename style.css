@@ -1,0 +1,83 @@
+* {
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="32" height="32"><circle cx="8" cy="8" r="7" fill="black"/></svg>') 6 6, auto;
+}
+
+body {
+  background-color: #FFFFFF;
+  /* margin:0; */
+  font-size:6vh;
+  -webkit-font-smoothing: antialiased;
+  border: 0px solid black;
+  padding:10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  animation-name: out; /* Applying the 'out' animation */
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  background-color: rgba(0, 255, 0, 0); /* Start with transparent background */
+}
+
+a:hover {
+  color: blue;
+  background-color: rgba(0, 255, 0, 1); /* Ending with solid green background */
+  animation-name: over; /* Applying the 'over' animation */
+  animation-duration: 0s; /* Instant transition */
+}
+
+/* a:visited {
+  color: blue;
+} */
+
+a, a:visited, a:link {
+  color: black; /* Explicitly setting the color for all link states */
+  text-decoration: none;
+}
+
+/* p{
+  font-size: 5vh;
+} */
+
+/* h1{
+  font-size: 3vh;
+} */
+
+
+p > a {
+  color: black;
+}
+
+p > a:hover {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+p > a, p > a:hover {
+  animation: none; /* This prevents the animation from being applied */
+}
+
+@keyframes over {
+  from {background-color: rgba(0, 255, 0, 0); color: black;} /* Start state */
+  to {background-color: rgba(0, 255, 0, 1); color: blue;} /* End state */
+}
+
+@keyframes out {
+  from {background-color: rgba(0, 255, 0, 1); color: blue;} /* Start state */
+  to {background-color: rgba(0, 255, 0, 0); color: black;} /* End state */
+}
+
+::selection {
+  color: #F7F7F4;
+  background-color: #00f000;
+}
+
+
